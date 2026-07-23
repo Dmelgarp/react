@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import { PrimerComponente } from './components/primerComponente'
+import { SegundoComponente } from './components/segundoComponente'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -116,7 +117,11 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      
       <PrimerComponente/>
+      <hr/>
+      <SegundoComponente/>
+      <hr/>
     </>
   )
 }
