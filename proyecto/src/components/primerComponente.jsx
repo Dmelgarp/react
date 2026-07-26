@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 
 export const PrimerComponente = () => {
-    let cursos = [
+    const [cursos, setCursos] = useState([
         "Ingerieria Termonuclear Avanzada",
         "Como tomar agua",
         "Boxeo contra kanguros",
-    ]
+    ])
 
+    const cambiarCurso = (nuevoCurso) => {
+        setCursos[0]()
+    }
 
     return (
         <>
