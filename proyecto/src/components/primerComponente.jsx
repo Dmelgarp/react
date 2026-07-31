@@ -5,8 +5,13 @@ export const PrimerComponente = () => {
         "Ingerieria Termonuclear Avanzada",
         "Como tomar agua",
         "Boxeo contra kanguros",
-    ]
+    ])
 
+    const cambiarCurso = (nuevoCurso) => {
+        nuevosCursos = [...cursos]
+        nuevosCursos[1] = nuevoCurso
+        setCursos(nuevosCursos)
+    }
 
     return (
         <>
@@ -17,7 +22,7 @@ export const PrimerComponente = () => {
                     cursos.map( (curso, index) => {
                         return(
                             <li key={index}>{curso}</li>
-                        )
+                        );
                     })
                 }
             </ul>
