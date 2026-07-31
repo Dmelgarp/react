@@ -2,13 +2,13 @@ import React, {useState} from "react";
 
 export const PrimerComponente = () => {
     const [cursos, setCursos] = useState([
-        "Ingerieria Termonuclear Avanzada",
-        "Como tomar agua",
-        "Boxeo contra kanguros",
+        "Ingeniería Termonuclear Avanzada",
+        "Cómo tomar agua",
+        "Boxeo contra canguros",
     ])
 
     const cambiarCurso = (nuevoCurso) => {
-        nuevosCursos = [...cursos]
+        const nuevosCursos = [...cursos]
         nuevosCursos[1] = nuevoCurso
         setCursos(nuevosCursos)
     }
@@ -17,6 +17,8 @@ export const PrimerComponente = () => {
         <>
             <h1>Primer Componente</h1>
             <p>Cursos disponibles</p>
+
+            
             <ul>
                 {
                     cursos.map( (curso, index) => {
@@ -26,6 +28,9 @@ export const PrimerComponente = () => {
                     })
                 }
             </ul>
+
+            <input type="text" onChange={ e => cambiarCurso(e.target.value)} placeholder="Cambia el texto del curso"/>
+
             <button onClick={ e => (cambiarCurso("Como tomar alcohol"))}>
                 Cambiar curso
             </button>
