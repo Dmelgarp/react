@@ -17,13 +17,12 @@ export const PrimerComponente = () => {
         <>
             <h1>Primer Componente</h1>
             <p>Cursos disponibles</p>
-
-            
+                    
             <ul>
                 {
                     cursos.map( (curso, index) => {
                         return(
-                            <li key={index}>{curso}</li>
+                           <li key={index}> <strong className={curso.length >= 4 ? 'verde': 'rojo'}> {curso}</strong> </li> 
                         );
                     })
                 }
