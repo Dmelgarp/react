@@ -22,7 +22,7 @@ export const PrimerComponente = () => {
                 {
                     cursos.map( (curso, index) => {
                         return(
-                           <li key={index}> <strong className={curso.length >= 4 ? 'verde': 'rojo'}> {curso}</strong> </li> 
+                           <li key={index}> <strong className={curso.length >= 4 ? 'verde': 'rojo'}> {curso} </strong> </li> 
                         );
                     })
                 }
