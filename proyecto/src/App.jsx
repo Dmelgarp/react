@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { PrimerComponente } from './components/primerComponente'
 import { SegundoComponente } from './components/segundoComponente'
+import { TercerComponente } from './components/tercerComponente'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -122,6 +123,7 @@ function App() {
       <hr/>
       <SegundoComponente/>
       <hr/>
+      <TercerComponente/>
     </>
   )
 }
