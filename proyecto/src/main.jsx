@@ -1,8 +1,29 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import MyApp from './components/segundoComponente';
+import Cars from './components/tercerComponente';
+
+const myElement = (
+    <>
+        <table>
+            <tr>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>Diego</td>
+            </tr>
+            <tr>
+                <td>Mario</td>
+            </tr>
+        </table>
+        <MyApp/>
+        <hr/>
+        <Cars/>
+    </>
+
+
+);
 
 createRoot(document.getElementById('root')).render(
-    <App />
+    myElement
 )
