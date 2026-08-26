@@ -6,19 +6,27 @@ import Cars from './components/tercerComponente';
 const myElement = (
     <>
         <table>
-            <tr>
-                <th>Name</th>
-            </tr>
-            <tr>
-                <td>Diego</td>
-            </tr>
-            <tr>
-                <td>Mario</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Diego</td>
+                </tr>
+                <tr>
+                    <td>Mario</td>
+                </tr>
+            </tbody>
         </table>
-        <MyApp/>
-        <hr/>
-        <Cars/>
+
+        <MyApp />
+
+        <hr />
+
+        <Cars />
     </>
 
 
