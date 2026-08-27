@@ -1,7 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import MyApp from './components/segundoComponente';
-import Cars from './components/tercerComponente';
+import Normal from './reactES6/arrowFunctions';
 
 const myElement = (
     <>
@@ -22,11 +21,8 @@ const myElement = (
             </tbody>
         </table>
 
-        <MyApp />
+        <Normal/>
 
-        <hr />
-
-        <Cars />
     </>
 
 

@@ -1,16 +1,31 @@
-export default function Cars (){
-    class Car {
-        constructor(name){
-            this.brand = name
-        }
+class Car {
+    constructor(name) {
+        this.brand = name
     }
 
-    const myCar =  new Car("Auto")
+    present() {
+        return "Tengo un " + this.brand + " :b "
+    }
+}
 
+class Model extends Car {
+    constructor(name, mod, col) {
+        super(name)
+        this.model = mod
+        this.color = col
+    }
+    show() {
+        return this.present() + "modelo  " + this.model + " de color " + this.color
+    }
+}
+
+export default function Cars() {
+    const myCar = new Model("Toyota", "Corolla", "Negro")
+    
     return (
         <>
-            <h1>Este es el segundo componente</h1>
-            <p>{myCar.brand}</p>
+            <h1>Este es el tercer componente</h1>
+            <p>{myCar.show()}</p>
         </>
     )
 }
