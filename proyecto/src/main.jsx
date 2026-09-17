@@ -1,31 +1,13 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Normal from './reactES6/arrowFunctions';
+import Funciones from './reactES6/arrowFunctions';
+import ArrowFun from './reactES6/arrowFunctions2';
 
 const myElement = (
     <>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Diego</td>
-                </tr>
-                <tr>
-                    <td>Mario</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <Normal/>
+        <ArrowFun/>
 
     </>
-
-
 );
 
 createRoot(document.getElementById('root')).render(
