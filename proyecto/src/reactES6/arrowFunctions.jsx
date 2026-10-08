@@ -43,29 +43,24 @@ export default function Funciones() {
     useEffect(() => {
         // El objeto window llama a la funcion changeColor
         window.addEventListener("load", myHeader.changeColor)
+        window.addEventListener("load", myHeader2.changeColor)
+
 
         // El boton que llama a la funcion changueColor
         const btn = document.getElementById("btn")
         btn.addEventListener("click", myHeader.changeColor)
+        const btn2 = document.getElementById("btn2")
+        btn2.addEventListener("click", myHeader2.changeColor)
 
         // Cleanup: Eliminamos listeners cuando el componente se desmonta
         return () => {
             window.removeEventListener("load", myHeader.changeColor)
             btn.removeEventListener("click", myHeader.changeColor)
-        }
-    }, [myHeader])
 
-    useEffect(() => {
-        window.addEventListener("load", myHeader2.changeColor)
-
-        document.getElementById("btn2").addEventListener("click", myHeader2.changeColor)
-
-        return () => {
             window.removeEventListener("load", myHeader2.changeColor)
-            btn.removeEventListener("click",myHeader2.changeColor )
+            btn2.removeEventListener("click",myHeader2.changeColor )
         }
-        
-    },[myHeader2])
+    }, [myHeader, myHeader2])
     
     // ********************* RESULTADO DEVUELTO ************************************
     return (
