@@ -6,6 +6,10 @@ function dateInfo(dat) {
     return [d, m, y,]
 }
 
+function Greeting({name, age}){
+    return <h3>Hola, {name} tu edad es de {age}</h3>
+}
+
 export default function Destructuring() {
     // forma antigua de asignar elementos de un array a una variable
     const vehicles = ["mustang", "f1", "caterpilar"]
@@ -27,7 +31,24 @@ export default function Destructuring() {
         lastName: "Doe",
         age: 50
     }
-    const {firstName, lastName, age} = person
+
+    //const {lastName, age, firstName} = person
+    
+    // puedes agregar un valor extra
+    const {firstName, lastName, age, country="Riberalta"} = person
+
+    // desestructuracion con atributos anidados
+    const persona = {
+        nombre: "Diego",
+        apellido: "Melgar",
+        edad: 50,
+        auto: {
+            marca: "Ford",
+            modelo: "Mustang",
+        }
+    }
+
+    const {nombre, auto: { marca, modelo}} = persona
 
 return (
     <>
@@ -37,7 +58,15 @@ return (
         <p>{auto}</p>
         <p>Hoy es {date} de {month} del {year}</p>
         <h1>Desestructuracion de objetos</h1>
-        <p>{firstName}</p>
+        <p>{firstName} {lastName} {age} {country}</p>
+        <p>{nombre} {marca} {modelo}</p>
+        <h1>Desestructuracion de componentes</h1>
+        <p>La desestructuracion es especialmente util en react para trabajarcon props
+            hooks y respuestas de API. Ayuda a que tu codigo sea mas conciso y facil de leer.
+        </p>
+        <h2>Desestructuracion de props</h2>
+        <Greeting name="Diego" age={23} />
+        <h2>Desestructuracion del Hook useState </h2>
     </>
 )
 }
