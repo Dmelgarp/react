@@ -1,3 +1,16 @@
+import {useState} from "react"
+
+function Counter() {
+    // se desestructura el array devuelto por el useState
+    const [count, setCount] = useState(0)
+
+    return (
+        <button onClick={() => setCount(count + 1)}>
+            Count: {count}
+        </button>
+    )
+}
+
 function dateInfo(dat) {
     const d = dat.getDate()
     const m = dat.getMonth()
@@ -67,6 +80,7 @@ return (
         <h2>Desestructuracion de props</h2>
         <Greeting name="Diego" age={23} />
         <h2>Desestructuracion del Hook useState </h2>
+        <Counter/>
     </>
 )
 }
